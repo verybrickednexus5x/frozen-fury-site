@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frozen Fury Australia Tour Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 { color: #0ff; }
+    form {
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 400px;
+      width: 100%;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    select, input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: none;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.7rem;
+      width: 100%;
+      background: #0ff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0cc;
+    }
+    #message {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #f66;
+    }
+    #loader {
+      display: none;
+      margin-top: 1rem;
+      font-style: italic;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Frozen Fury Australia Tour</h1>
+  <p>Fill out the form to reserve your spot… if you can.</p>
+
+  <form id="bookingForm">
+    <label for="showSelect">Choose your show:</label>
+    <select id="showSelect" required>
+      <option value="" disabled selected>Select a show</option>
+      <option value="19 May 2025, 9:00PM @ MCG, Melbourne">19 May 2025, 9:00 PM – MCG, Melbourne</option>
+      <option value="24 May 2025, 6:30PM @ Sydney Opera House">24 May 2025, 6:30 PM – Sydney Opera House</option>
+      <option value="28 June 2025, 5:15PM @ Adelaide Oval">28 June 2025, 5:15 PM – Adelaide Oval</option>
+      <option value="29 October 2025, 6:30PM @ Melbourne PAC">29 October 2025, 6:30 PM – Melbourne Performing Arts Centre</option>
+    </select>
+
+    <label for="nameInput">Your Name:</label>
+    <input type="text" id="nameInput" placeholder="Enter your name" required>
+
+    <label for="emailInput">Your Email:</label>
+    <input type="email" id="emailInput" placeholder="you@example.com" required>
+
+    <label for="ticketCount">Number of Tickets:</label>
+    <input type="number" id="ticketCount" min="1" max="10" value="1" required>
+
+    <button type="submit">Reserve Tickets</button>
+    <div id="loader">Processing your booking… 🔄</div>
+  </form>
+
+  <div id="message"></div>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Hide form controls and show loader
+      Array.from(this.elements).forEach(el => el.disabled = true);
+      document.getElementById('loader').style.display = 'block';
+
+      // Simulate processing delay
+      setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('message').textContent = 
+          "😞 Sorry, you're too late—this show is completely SOLD OUT.";
+      }, 2000);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Global styles for the entire website */
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #111;
+}
+
+/* Specific styles for the upcoming shows page background */
+.upcoming-shows-body {
+    background-image: url('concert_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Semi-transparent white background for upcoming shows content */
+.upcoming-shows-body main {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+/* Navigation bar styling */
+.navbar {
+    background-color: #1f1f1f;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+/* Center navigation content with flexbox */
+.nav-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Navigation link styles */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+.navbar a:hover {
+    color: #00ffff;
+}
+
+/* Main content container styling */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Responsive image styling */
+img {
+    max-width: 500px;
+    width: 100%;
+    margin: 2rem auto;
+    display: block;
+}
+
+/* Upcoming shows table styling */
+.shows-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table cell styling */
+.shows-table th,
+.shows-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Table header styling */
+.shows-table th {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+/* Table row hover effect */
+.shows-table tr:hover {
+    background-color: rgba(255, 255, 255, 1);
+}

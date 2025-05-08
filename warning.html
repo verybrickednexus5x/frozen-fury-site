@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>External Site Warning</title>
+  <style>
+    body {
+      background-color: #000;
+      color: red;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background-color: #ff4444;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #ff0000;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <h1>You are about to enter an external site,<br>that should not reflect the grade of Xavier Tepeli at all, nor should this site you are viewing at the moment.</h1>
+  <a href="ticket-booking-fake.html">
+    <button>Continue</button>
+  </a>
+</body>
+</html>
