@@ -180,3 +180,51 @@ img {
     font-style: normal;
     line-height: 1.6;
 }
+
+/* Music player styling */
+.music-player-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-audio-player {
+    width: 100%;
+    margin-bottom: 1rem;
+    filter: invert(1) hue-rotate(180deg);
+    opacity: 0.9;
+}
+
+.custom-audio-player::-webkit-media-controls-panel {
+    background-color: #2a2a2a;
+}
+
+.music-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.lyrics-button button {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.lyrics-button button:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}
+
+.lyrics-button button:active {
+    transform: scale(0.98);
+}

@@ -19,17 +19,22 @@
 
     <main>
         <img src="cd_cover_1.png" alt="Frozen Ground Cover">
-        <h1>Frozen Ground - Our Newest Song</h1>
-        <p>"All of the best styles of song come together in a musical masterpiece" — Wall Street Journal</p>
+        <h1>Frozen Ground - Our Newest Song</h1>        <p>"All of the best styles of song come together in a musical masterpiece" — Wall Street Journal</p>
         <p>"Incredible; Absolute Cinema" — Spotify</p>
-        <a href="Frozen Ground.pdf">
-            <button>Check Lyrics</button>
+        
+        <div class="music-player-container">
+            <audio controls class="custom-audio-player">
+                <source src="Frozen Ground.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             
-             <audio controls>
-        <source src="Frozen Ground.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-        </a>
+            <div class="music-controls">
+                <a href="Frozen Ground.pdf" class="lyrics-button">
+                    <button>Check Lyrics</button>
+                </a>
+            </div>
+        </div>
+
         <p>Frozen Fury © 2025</p>
     </main>
 
