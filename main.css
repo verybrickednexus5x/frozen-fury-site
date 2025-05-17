@@ -231,11 +231,14 @@ img {
 
 /* Index page specific styling */
 body.index-page {
-    background-image: url('antartica.png');
+    background-image: url('./antartica.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    background-color: #000; /* Fallback color */
 }
 
 .index-page main {
