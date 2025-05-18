@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="main.css">
     <title>Frozen Fury - Ticket Booking</title>
     <style>
+        body {
+            background-color: white;
+        }
+
         .booking-container {
             max-width: 600px;
             margin: 2rem auto;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: white;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -25,12 +29,15 @@
 
         .booking-form select,
         .booking-form input {
-            width: 100%;
+            width: calc(100% - 1.6rem); /* Account for padding to match visual width */
             padding: 0.8rem;
             margin-top: 0.3rem;
             border: 1px solid #ddd;
             border-radius: 6px;
             font-family: 'Lexend Deca', sans-serif;
+            font-size: 1rem;
+            height: 48px; /* Fixed height for all inputs */
+            box-sizing: border-box;
         }
 
         .booking-form button {
@@ -46,6 +53,8 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
             font-family: 'Lexend Deca', sans-serif;
+            height: 48px; /* Match input height */
+            box-sizing: border-box;
         }
 
         .booking-form button:hover {
@@ -67,14 +76,6 @@
             color: #ff4444;
             text-align: center;
             font-weight: bold;
-        }
-
-        body {
-            background-image: url('concert_1.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
         }
     </style>
 </head>
